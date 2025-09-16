@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+<!-- this removes the header -->
+{% block header %}{% endblock %}
+
+{% block main %}
+<div class="flex justify-center pt-10 pb-20 bg-cyan-600"> 
+  <div class="bg-cyan-50 shadow-lg rounded-2xl p-8 w-full max-w-lg border border-cyan-200">
+    {% for post in posts %}
+        <div class="post">{{ post[1] }}</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

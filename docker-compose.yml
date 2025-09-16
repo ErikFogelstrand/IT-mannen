@@ -44,8 +44,8 @@ services:
       - .:/app
       - images:/src/images
     working_dir: /app
-    command: python src/app.py
-    
+    command: flask --app src/app.py --debug run
+
 
 volumes:
   images:
