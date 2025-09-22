@@ -37,7 +37,7 @@ def user_page() -> str:
             file_name=filename
             )
             flash("post is not timed", "info")
-        
+
         flash("post created successfully", "success")
         return redirect("/")
     else:

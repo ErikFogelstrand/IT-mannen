@@ -6,7 +6,6 @@ from typing import Sequence
 
 
 def register_blueprints(app: Flask) -> None:
-
     path: Sequence[str] = getattr(blueprints, "__path__")
     modules = pkgutil.iter_modules(path)
 
