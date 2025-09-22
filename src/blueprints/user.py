@@ -28,14 +28,12 @@ def user_page() -> str:
                 description=form.description.data,
                 file_name=filename,
                 start_time=form.start_time.data,
-                end_time=form.end_time.data,
-                )
+                end_time=form.end_time.data)
             flash("post set as timed", "info")
         else:
             create_post(
-            description=form.description.data,
-            file_name=filename
-            )
+                description=form.description.data,
+                file_name=filename)
             flash("post is not timed", "info")
 
         flash("post created successfully", "success")

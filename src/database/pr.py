@@ -13,7 +13,6 @@ def create_group(cur: cursor, group_name: str):
 
 @pr_cursor
 def create_post(cur: cursor, description: str, file_name: str):
-
     cur.execute(
         "INSERT INTO Posts (description, file_name, owner) VALUES (%s, %s, %s);",
         (description, file_name, "admin"),
